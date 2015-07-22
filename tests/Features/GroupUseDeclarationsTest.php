@@ -1,6 +1,7 @@
 <?php
-namespace Shin1x1\PHP7ReferenceSample;
+namespace Shin1x1\PHP7ReferenceSample\Features;
 
+use Shin1x1\PHP7ReferenceSample\BaseTestCase;
 use Shin1x1\PHP7ReferenceSample\Acme\{Foo, Bar};
 
 class GroupUseDeclarationsTest extends BaseTestCase

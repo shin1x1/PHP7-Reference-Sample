@@ -1,5 +1,7 @@
 <?php
-namespace Shin1x1\PHP7ReferenceSample;
+namespace Shin1x1\PHP7ReferenceSample\Features;
+
+use Shin1x1\PHP7ReferenceSample\BaseTestCase;
 
 class UnicodeCodepointEscapeTest extends BaseTestCase
 {

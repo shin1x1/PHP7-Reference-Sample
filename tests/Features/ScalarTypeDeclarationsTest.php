@@ -1,6 +1,8 @@
 <?php
 //declare(strict_types=1);
-namespace Shin1x1\PHP7ReferenceSample;
+namespace Shin1x1\PHP7ReferenceSample\Features;
+
+use Shin1x1\PHP7ReferenceSample\BaseTestCase;
 
 class ScalarTypeDeclarationsTest extends BaseTestCase
 {
