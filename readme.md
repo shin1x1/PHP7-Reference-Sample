@@ -1,5 +1,7 @@
 ## PHP 7 Reference Sample
 
+[![Build Status](https://travis-ci.org/shin1x1/PHP7-Reference-Sample.svg)](https://travis-ci.org/shin1x1/PHP7-Reference-Sample)
+
 @see [https://github.com/tpunt/PHP7-Reference](https://github.com/tpunt/PHP7-Reference)
 
 
