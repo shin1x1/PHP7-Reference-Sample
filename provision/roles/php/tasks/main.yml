@@ -1,0 +1,43 @@
+---
+- name: Install epel yum repository
+  yum: name="http://ftp.tsukuba.wide.ad.jp/Linux/fedora/epel/7/x86_64/e/epel-release-7-5.noarch.rpm"
+
+- name: Install remi yum repository
+  yum: name="http://rpms.remirepo.net/enterprise/remi-release-7.rpm"
+
+- name: Install PHP 7
+  yum: name={{ item }} state=present enablerepo=remi,remi-test
+  with_items:
+    - php70-php
+    - php70-php-cli
+    - php70-php-process
+    - php70-php-pdo
+    - php70-php-mbstring
+    - php70-php-mcrypt
+    - php70-php-devel
+    - php70-php-common
+    - php70-php-mysql
+    - php70-php-mysqlnd
+    - php70-php-pear
+    #- php70-php-pecl-xdebug
+    - php70-php-opcache
+    - php70-php-json
+    - php70-php-xml
+
+- name: Create symlink php70
+  file: src=/opt/remi/php70/root/usr/bin/{{ item }} dest=/usr/bin/{{ item }} state=link
+  with_items:
+    - php
+    - php-cgi
+    - phar.phar
+
+- name: Copy custom php.ini
+  copy: src=zzmyphp.ini dest=/etc/opt/remi/php70/php.d/zzmyphp.ini
+
+- name: Install composer.phar
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin creates=/usr/bin/composer
+
+- name: Rename composer.phar to composer
+  command: mv /usr/bin/composer.phar /usr/bin/composer creates=/usr/bin/composer
+
+

@@ -1,0 +1,3 @@
+---
+- name: Install epel yum repository
+  yum: name="http://ftp.tsukuba.wide.ad.jp/Linux/fedora/epel/7/x86_64/e/epel-release-7-5.noarch.rpm"

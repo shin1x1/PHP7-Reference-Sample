@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpunit/phpunit": "~4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shin1x1\\PHP7ReferenceSample\\": "tests/"
+        }
+    }
+}
